@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./topBar.css" />
+    <link rel="stylesheet" href="./CSS/articleCSS.css" />
+  </head>
+  <body>
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <div class="clear"></div>
+
+    <div class="menuBarContainer">
+      <h1>NEWS</h1>
+    </div>
+
+    <!--menu bar container 2-->
+    <div class="clear"></div>
+    <div class="container">
+      <div class="xs-menu-cont">
+        <a id="menutoggle"><i class="fa fa-align-justify"></i> </a>
+        <nav class="xs-menu displaynone">
+          <ul>
+            <li class="active">
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Services</a>
+            </li>
+            <li>
+              <a href="#">Team</a>
+            </li>
+            <li>
+              <a href="#">Portfolio</a>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li class="active">
+            <a href="#">Home</a>
+          </li>
+          <li class="drop-down">
+            <a href="#">Products</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Team</a>
+          </li>
+          <li>
+            <a href="#">Portfolio</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a target="_blank" href="http://www.mywebtricks.com/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <h1 id="articleTitle"></h1>
+    <img id="articleImage" alt="Article Image">
+    <p id="articleAuthor"></p>
+    <p id="articleContent"></p>
+
+    <script>
+      // Retrieve article data from localStorage
+      const selectedArticle = JSON.parse(
+        localStorage.getItem("selectedArticle")
+      );
+
+      // Populate the article content
+      const articleTitle = document.getElementById("articleTitle");
+      const articleImage = document.getElementById("articleImage");
+      const articleAuthor = document.getElementById("articleAuthor");
+      const articleContent = document.getElementById("articleContent");
+
+      articleTitle.textContent = selectedArticle.title;
+      articleImage.src = selectedArticle.articleImg;
+      articleAuthor.textContent = `Author: ${selectedArticle.author}`;
+      articleContent.textContent = selectedArticle.content;
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </body>
+</html>

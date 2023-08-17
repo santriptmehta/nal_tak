@@ -1,0 +1,37 @@
+/* Reset default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: black;
+}
+
+/* Title styling */
+h1 {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Article image */
+#articleImage {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+/* Author styling */
+#articleAuthor {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #666;
+}
+
+/* Content styling */
+#articleContent {
+    font-size: 16px;
+    margin-top: 10px;
+}
