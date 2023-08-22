@@ -1,90 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./topBar.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/style_desk.css">
+  <link rel="stylesheet" href="./topBar.css">
 </head>
+
 <body>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <div class="clear"></div>
+
+  <div class="menuBarContainer">
+    <h1>NEWS</h1>
+  </div>
+
+  <!--menu bar container 2-->
+  <div class="clear"></div>
+  <div class="container">
+    <div class="xs-menu-cont">
+      <a id="menutoggle"><i class="fa fa-align-justify"></i> </a>
+      <nav class="xs-menu displaynone">
+        <ul>
+          <li class="active">
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Team</a>
+          </li>
+          <li>
+            <a href="#">Portfolio</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li class="drop-down">
+          <a href="#">राष्ट्रीय</a>
+        </li>
+        <li>
+          <a href="#">अपना बिहार          </a>
+        </li>
+        <li>
+          <a href="#">अपराध</a>
+        </li>
+        <li>
+          <a href="#">शिक्षा</a>
+        </li>
+        <li>
+          <a href="#">मनोरंजन</a>
+
+        </li>
+        <li>
+          <a target="_blank" href="http://www.mywebtricks.com/">Contact</a>
+        </li>
+
+
+      </ul>
+    </nav>
+  </div>
+
+  
+  <div class="top_div_container">
+    <div class="box">
+      <ul id="latestNewsContainer">
+        <!-- Articles will be dynamically added here -->
+      </ul>
+
+    </div>
+    <!-- -------------------- -->
+    <div class="box">Box 2
+      <div class="news_container">
+        <ul id="articleContainer">
+          <!-- Articles will be dynamically added here -->
+        </ul>
+      </div>
+    </div>
+    <!-- ----------------------------- -->
     
-    
-    <div class="clear"></div>
+  </div>
 
-        <div class="menuBarContainer">
-            <h1>NEWS</h1>
-        </div>
 
-        <!--menu bar container 2-->
-        <div class="clear"></div>
-        <div class="container">
-            <div class="xs-menu-cont">
-              <a id="menutoggle"><i class="fa fa-align-justify"></i> </a>
-              <nav class="xs-menu displaynone">
-                <ul>
-                  <li class="active">
-                    <a href="#">Home</a>
-                  </li>
-                  <li>
-                    <a href="#">About</a>
-                  </li>
-                  <li>
-                    <a href="#">Services</a>
-                  </li>
-                  <li>
-                    <a href="#">Team</a>
-                  </li>
-                  <li>
-                    <a href="#">Portfolio</a>
-                  </li>
-                  <li>
-                    <a href="#">Blog</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact</a>
-                  </li>
-          
-                </ul>
-              </nav>
-            </div>
-            <nav class="menu">
-              <ul>
-                <li class="active">
-                  <a href="#">Home</a>
-                </li>
-                <li class="drop-down">
-                  <a href="#">Products</a>
-                </li>
-                <li>
-                  <a href="#">Services</a>
-                </li>
-                <li>
-                  <a href="#">Team</a>
-                </li>
-                <li>
-                  <a href="#">Portfolio</a>
-                </li>
-                <li>
-                  <a href="#">Blog</a>
-          
-                </li>
-                <li>
-                  <a target="_blank" href="http://www.mywebtricks.com/">Contact</a>
-                </li>
-               
-          
-              </ul>
-            </nav>
-          </div>
-
-          <div class="news_container">
-            <h1>Article List</h1>
-            <ul id="articleContainer">
-              <!-- Articles will be dynamically added here -->
-            </ul>
-          </div>
 
 
 
@@ -93,10 +111,11 @@
 
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
-  
+
   <script src="./app.js" type="module"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 
 </body>
+
 </html>

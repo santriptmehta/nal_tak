@@ -1,0 +1,19 @@
+/* Media queries */
+@media (min-width: 768px) {
+    /* Styles for tablet and desktop views */
+    .container2menu {
+        margin: 10px 20px;
+    }
+
+    .top_div_container {
+        margin-left: 200px;
+        margin-right: 200px;
+        flex-direction: row;
+        align-items: stretch;
+      }
+    
+      .box {
+        flex-basis: auto;
+      }
+
+}

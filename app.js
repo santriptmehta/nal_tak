@@ -37,9 +37,51 @@ const db = firebase.firestore();
 
 // Reference to the "home" collection
 const homeCollection = db.collection("home");
+const headingNews = db.collection("latestNews");
 
 // Reference to the container div
 const articleContainer = document.getElementById("articleContainer");
+const newsContainer = document.getElementById("latestNewsContainer");
+
+//Latest News data displayed
+// Reference to the latestNews collection and document
+const latestNewsDocRef = db.collection("latestNews").doc("l_news_data");
+
+// Get the news data from Firestore
+latestNewsDocRef.get().then((doc) => {
+  if (doc.exists) {
+    const newsData = doc.data();
+
+    // Populate the news container with retrieved data
+    newsContainer.innerHTML = `
+      <h2 class="headline">${newsData.title}</h2>
+      <img src="${newsData.articleImg}" alt="News Image" class="news-image">
+      <p class="date-time">Published: ${newsData.dateTime}</p>
+      <p class="author">By ${newsData.author}</p>
+    `;
+
+    // Add click event listener to open a new page
+    // Add click event listener to news items
+    const newsItems = document.querySelectorAll('.news-item');
+    newsItems.forEach((item) => {
+      item.addEventListener('click', () => {
+        const newsId = item.getAttribute('data-id');
+        
+        // Store news data in local storage
+        localStorage.setItem("selectedArticle", JSON.stringify(newsData));
+        
+        window.location.href = "article.html";
+      });
+    });
+
+
+
+  } else {
+    console.log("No such document!");
+  }
+}).catch((error) => {
+  console.log("Error getting document:", error);
+});
 
 // Retrieve data from the "home" collection
 homeCollection.get().then((querySnapshot) => {
