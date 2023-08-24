@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./topBar.css" />
+    <link rel="stylesheet" href="./Header/topBar.css" />
     <link rel="stylesheet" href="./CSS/articleCSS.css" />
   </head>
   <body>
@@ -28,7 +28,7 @@
         <nav class="xs-menu displaynone">
           <ul>
             <li class="active">
-              <a href="#">Home</a>
+              <a href="./index.html">Home</a>
             </li>
             <li>
               <a href="#">About</a>
@@ -48,41 +48,61 @@
             <li>
               <a href="#">Contact</a>
             </li>
+  
           </ul>
         </nav>
       </div>
       <nav class="menu">
         <ul>
           <li class="active">
-            <a href="#">Home</a>
+            <a href="./index.html">Home</a>
           </li>
           <li class="drop-down">
-            <a href="#">Products</a>
+            <a href="#">राष्ट्रीय</a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a href="#">अपना बिहार          </a>
           </li>
           <li>
-            <a href="#">Team</a>
+            <a href="#">अपराध</a>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <a href="#">शिक्षा</a>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href="#">मनोरंजन</a>
+  
           </li>
           <li>
             <a target="_blank" href="http://www.mywebtricks.com/">Contact</a>
           </li>
+  
+  
         </ul>
       </nav>
     </div>
 
-    <h1 id="articleTitle"></h1>
+    <!-- <h1 id="articleTitle"></h1>
     <img id="articleImage" alt="Article Image">
     <p id="articleAuthor"></p>
-    <p id="articleContent"></p>
+    <p id="articleContent"></p> -->
 
+
+    <div id="articleContainer">
+      <h1 id="articleTitle">Article Title</h1>
+      <img id="articleImage" src="path/to/your/image.jpg" alt="Article Image">
+      <p id="articleAuthor">Author Name</p>
+      <p id="articleContent">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat justo non dignissim auctor.
+          ...
+      </p>
+  </div>
+
+
+
+
+
+    
     <script>
       // Retrieve article data from localStorage
       const selectedArticle = JSON.parse(
